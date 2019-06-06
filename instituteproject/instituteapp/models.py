@@ -1,6 +1,6 @@
 from django.db import models
 
-from multiselectfield import MultiSelectField
+from multiselectfield import MultiSelectFormField
 
 class FeedbackData(models.Model):
     name=models.CharField(max_length=30)
@@ -25,7 +25,7 @@ class ContactData(models.Model):
         ('rest','RESTAPI')
     )
 
-    courses=MultiSelectField(max_length=200,choices=COURSES_CHOICES)
+    courses=MultiSelectFormField(max_length=200,choices=COURSES_CHOICES)
 
     SHIFTS_CHOICES=(
         ('mrg','morning'),
@@ -33,7 +33,7 @@ class ContactData(models.Model):
         ('evng','evening'),
         ('night','night')
     )
-    shifts=MultiSelectField(max_length=200,choices=SHIFTS_CHOICES)
+    shifts=MultiSelectFormField(max_length=200,choices=SHIFTS_CHOICES)
 
     LOCATIONS_CHOICES=(
         ('hyd','hyderabad'),
@@ -41,7 +41,7 @@ class ContactData(models.Model):
         ('chennai','chennai'),
         ('pune','pune')
     )
-    locations=MultiSelectField(max_length=200,choices=LOCATIONS_CHOICES)
+    locations=MultiSelectFormField(max_length=200,choices=LOCATIONS_CHOICES)
 
     gender=models.CharField(max_length=50)
     start_date=models.DateField(max_length=100)
