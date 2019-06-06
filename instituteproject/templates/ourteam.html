@@ -1,0 +1,44 @@
+{% extends 'Base.html' %}
+{% load staticfiles%}
+<html>
+<head>
+    <title>ourteam page</title>
+</head>
+<body>
+{% block content %}
+
+    <div class="team">
+        <h1> Our Team</h1>
+    <span class="spl"></span>
+    <div class="pics">
+        <a href="#p1"><img src="{% static 'images/mypic5.jpg' %}"></a>
+         <a href="#p2"><img src="{% static 'images/mypic4.jpg' %}"></a>
+        <a href="#p3"><img src="{% static 'images/mypic3.jpg' %}"></a>
+    </div>
+
+    <div class="section" id="p1">
+        <h1 class="name"> RajaReddy</h1>
+        <span class="spl"></span>
+        <center> <p> Python </p></center>
+
+    </div>
+
+
+    <div class="section" id="p2">
+        <h1 class="name"> vijay</h1>
+        <span class="spl"></span>
+        <center> <p> Django </p></center>
+
+    </div>
+
+    <div class="section" id="p3">
+        <h1 class="name">akhil</h1>
+        <span class="spl"></span>
+        <center> <p> Rest api </p></center>
+
+    </div>
+ </div>
+
+{% endblock %}
+</body>
+</html>

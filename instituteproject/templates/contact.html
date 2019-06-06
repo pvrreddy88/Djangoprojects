@@ -1,0 +1,75 @@
+{% extends 'Base.html' %}
+<html>
+<head>
+    <title>contact page</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+{% block content %}
+{#    <style>#}
+{##}
+{#    ul{#}
+{#        margin-top: -10px;#}
+{#    }#}
+{##}
+{#    li{#}
+{#        list-style-type: none;#}
+{#        margin-top: -7px;#}
+{#    }#}
+{#    </style>#}
+    <style>
+
+    ul{
+        list-style-type: none;
+    }
+    .container{
+        border: yellow;
+    }
+    div{
+        background-color:mediumturquoise;
+        border: yellow;
+        margin-inside: 50px;
+    }
+    h2{
+        font-style: italic;
+    }
+    form{
+        border: yellow;
+    }
+</style>
+
+
+    <div class="container" >
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+
+           <center> <h2> please contact us </h2></center>
+            <form method="post">
+                {% csrf_token %}
+                {{ cform }}<br>
+                <center>
+
+                <input type="submit" value="submit" class="btn btn-success">
+                <input type="reset" value="clear" class="btn btn-danger">
+                </center>
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+
+    </div>
+
+{% endblock %}
+</body>
+</html>

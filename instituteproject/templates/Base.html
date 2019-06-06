@@ -1,0 +1,185 @@
+{% load staticfiles %}
+<html>
+<head>
+    <title>Base Page</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
+    <script type="text/javascript" href="{% static 'js/lightbox-plus-jquery.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/team.css'%}">
+
+
+</head>
+
+<style>
+
+      img{
+          border: 2px red dot-dash;
+          border-radius: 10px;
+
+      }
+    .container img{
+        filter: grayscale(100%);
+        transition:1s;
+    }
+    .container img:hover{
+         filter: grayscale(100%);
+         transform: scale(1.1);
+     }
+      body{
+          {#background-color: #0652DD;#}
+      }
+    h3{
+        text-shadow: 2px 2px 2px red;
+    }
+    #ul1{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color:darkgoldenrod;
+    }
+    li a{
+        float: left;
+    }
+    li a{
+       display: block;
+        color:white;
+        text-align: center;
+        padding: 15px 20px;
+        text-decoration: none;
+        font-size: 20px;
+
+    }
+
+    li a:hover{
+        background-color: orange;
+        color: rebeccapurple;
+    }
+    .footer{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color:darkgoldenrod;
+        color: white;
+        text-align: center;
+
+    }
+    #h11{
+        font-family: cursive;
+        font-size: 40px;
+        text-shadow: 2px 2px 2px green;
+        margin-top: -10px;
+    }
+    #name1{
+        font-size: 30px;
+        color: red;
+        font-family: cursive;
+        text-shadow: 2px 2px 2px blue;
+    }
+
+</style>
+<body>
+
+<ul id="ul1">
+    <li><a href="/home/">Home</a></li>
+    <li><a href="/contact/">Contacts</a></li>
+    <li><a href="/course/">Courses</a></li>
+    <li><a href="/feedback/">Feedback</a></li>
+    <li><a href="/ourteam/">Our Team</a></li>
+    <li><a href="/gallery/">Gallery</a></li>
+</ul>
+<marquee><h1 id="h11">Welcome to PVR Institute of Technologies</h1></marquee>
+{% block content %}
+{% endblock %}
+<footer class="footer">
+    <h3>Thank You.. Raja.</h3>
+</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+{#{% load staticfiles %}#}
+{#<html>#}
+{#<head>#}
+{#<title> Base Html </title>#}
+{# <meta charset="utf-8">#}
+{#  <meta name="viewport" content="width=device-width, initial-scale=1">#}
+{#  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">#}
+{#  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>#}
+{#  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>#}
+{#  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>#}
+{#    <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">#}
+{#          <script type="text/javascript" src="{% static 'js/lightbox-plus-jquery.min.js' %}"></script>#}
+{##}
+{#</head>#}
+{##}
+{#<style>#}
+{#    ul{#}
+{#        background-color: aqua;#}
+{#        font-size: 20px;#}
+{#        padding-right: 10px;#}
+{#        margin-bottom: 10px;#}
+{##}
+{#    }#}
+{#    h1{#}
+{#        text-shadow: red;#}
+{#        font-style: italic;#}
+{##}
+{#    }#}
+{#   footer{#}
+{#       margin-bottom: -50px;#}
+{##}
+{#   }#}
+{##}
+{#</style>#}
+{##}
+{##}
+{#<body>#}
+{##}
+{#<ul >#}
+{#    <a href="/home/">Home</a>#}
+{#    <a href="/contact/">Contact</a>#}
+{#    <a href="/course/">Course</a>#}
+{#    <a href="/feedback/">Feedback</a>#}
+{#    <a href="/gallery/">Gallery</a>#}
+{#    <a href="/ourteam/">Our Team</a>#}
+{#</ul>#}
+{##}
+{#<center>#}
+{#    <marquee>#}
+{#    <h1 name> Welcome to PVR Institute </h1>#}
+{#    </marquee>#}
+{#</center>#}
+{##}
+{##}
+{#    {% block content %}#}
+{##}
+{#    {% endblock %}#}
+{##}
+{#  <center>#}
+{# <footer>#}
+{##}
+{#         <h2> Thank You </h2>#}
+{##}
+{# </footer>#}
+{#  </center>#}
+{##}
+{#</body>#}
+{##}
+{#</html>#}

@@ -1,0 +1,61 @@
+{% extends 'Base.html' %}
+{% load staticfiles %}
+<html>
+<head>
+    <title>gallery page</title>
+{#     <meta charset="utf-8">#}
+{#  <meta name="viewport" content="width=device-width, initial-scale=1">#}
+{#  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">#}
+{#  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>#}
+{#  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>#}
+{#  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>#}
+
+</head>
+  <style>
+    {#  img{#}
+    {#      border: 2px red dot-dash;#}
+    {#      border-radius: 10px;#}
+    {##}
+    {#  }#}
+    {#.container img{#}
+    {#    filter: grayscale(100%);#}
+    {#    transition:1s;#}
+    {#}#}
+    {#.container img:hover{#}
+    {#     filter: grayscale(100%);#}
+    {#     transform: scale(1.1);#}
+    {# }#}
+    {#  body{#}
+    {#      background-color: #0652DD;#}
+    {#  }#}
+
+
+    </style>
+
+
+<body>
+{% block content %}
+
+
+    <div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <a href="{% static 'images/mypic6.jpg' %}"data-lightbox="container"/><img src="{% static 'images/mypic1.jpg' %} "style="height:60%;width:100%";></a>
+
+        </div>
+        <div class="col-md-4">
+           <a href="{% static 'images/mypic2.jpg' %}" data-lightbox="lb-container"> <img src="{% static 'images/mypic2.jpg'%}" style="height:60%;width:100%;"></a>
+
+        </div>
+        <div class="col-md-4">
+           <a href="{% static 'images/mypic4.jpg' %}" data-lightbox="lb-container"> <img src="{% static 'images/mypic4.jpg'%}" height="60%" width=" 100%"></a>
+
+        </div>
+    </div>
+
+    </div>
+
+
+{% endblock %}
+</body>
+</html>
