@@ -82,7 +82,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'institutedb',
         'USER':'root',
-        'PASSWORD':'root'
+        'PASSWORD':'root',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
     }
 }
 
